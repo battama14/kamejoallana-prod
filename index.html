@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- SEO de base -->
+<title>KAMEJOALLANA - Musique & Prods sur mesure</title>
+<meta name="description" content="Studio de production musicale. Sons originaux, vidéos artistiques, prods personnalisées. Bienvenue chez KAMEJOALLANA.">
+<meta name="keywords" content="KAMEJOALLANA, prod, musique, studio, beatmaker, audio, clips, netlify">
+<meta name="author" content="KAMEJOALLANA Production">
+
+<!-- Open Graph (Facebook & autres réseaux) -->
+<meta property="og:title" content="KAMEJOALLANA - Musique & Prods sur mesure">
+<meta property="og:description" content="Studio de production musicale. Sons originaux, vidéos artistiques, prods personnalisées.">
+<meta property="og:image" content="https://kamejoallana-prod.netlify.app/assets/logo-kamejo.png"> <!-- modifie le lien si tu mets ton logo ailleurs -->
+<meta property="og:url" content="https://kamejoallana-prod.netlify.app">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KAMEJOALLANA - Musique & Prods sur mesure">
+<meta name="twitter:description" content="Studio de prod indépendant. Crée ton son sur mesure.">
+<meta name="twitter:image" content="https://kamejoallana-prod.netlify.app/assets/logo-kamejo.png">
+
+<!-- Favicon -->
+<link rel="icon" href="https://kamejoallana-prod.netlify.app/assets/logo-kamejo.png" type="image/png">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAMEJOALLANA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="KAMEJOALLANA2.png" alt="KAMEJOALLANA" class="banner">
+  </header>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#music">Musique</a></li>
+      <li><a href="#videos">Vidéos</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#commande">Commande de prod</a></li>
+      <li><a href="#about">À propos</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero fade-in">
+    <h2>KAMEJOALLANA PRODUCTION</h2>
+    <p>Compositions originales, ambiance unique, vibration assurée.</p>
+  </section>
+
+  <section id="music" class="fade-in">
+    <h3>Musique</h3>
+    <div class="media-wrapper">
+      <audio controls>
+        <source src="music/prod.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas l'audio.
+      </audio>
+    </div>
+  </section>
+
+  <section id="videos" class="fade-in">
+    <h3>Vidéos</h3>
+	<h4>By Danice beatz</h4>
+    <div class="media-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/cC_9RDzuUIc?si=JggjrSLpo_AtnPFC" 
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h3>Contact</h3>
+    <p>Formulaire de contact bientôt disponible.</p>
+  </section>
+
+  <section id="commande" class="fade-in">
+    <h3>Commander une prod</h3>
+    <p>Un formulaire de commande sera ajouté ici très bientôt !</p>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h3>À propos</h3>
+    <p>KAMEJOALLANA est un projet musical alliant émotion et innovation. Chaque composition est un voyage sensoriel.</p>
+  </section>
+
+  <audio id="background-music" autoplay loop muted>
+    <source src="music/fond.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="sound-toggle">
+    <button onclick="toggleMusic()" id="toggleMusic">🔊 Activer/Désactiver musique</button>
+  </div>
+
+  <footer>
+    <p>© 2025 KAMEJOALLANA - Tous droits réservés</p>
+  </footer>
+
+  <script src="animations.js"></script>
+</body>
+</html>
