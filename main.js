@@ -45,4 +45,36 @@ document.addEventListener("DOMContentLoaded", () => {
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     }, 2000); // Charge Disqus après 2 secondes
+
+    // 🎵 Gestion de la musique de fond 🎵
+    const audio = document.getElementById("bg-music");
+    const toggleButton = document.getElementById("toggle-music");
+
+    const playlist = ["musique1.mp3", "musique2.mp3", "musique3.mp3"];
+    let currentTrack = 0;
+
+    function playMusic() {
+        audio.src = playlist[currentTrack];
+        audio.play();
+    }
+
+    function nextTrack() {
+        currentTrack = (currentTrack + 1) % playlist.length;
+        playMusic();
+    }
+
+    audio.addEventListener("ended", nextTrack); // Passe à la chanson suivante
+
+    toggleButton.addEventListener("click", () => {
+        if (audio.paused) {
+            playMusic();
+            toggleButton.textContent = "🔇 Couper la musique";
+        } else {
+            audio.pause();
+            toggleButton.textContent = "🎵 Activer la musique";
+        }
+    });
+
+    // Démarrer la musique dès le chargement du site
+    playMusic();
 });
