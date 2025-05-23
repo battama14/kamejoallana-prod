@@ -50,18 +50,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["fond.mp3", "AMBIANCE.mp3", "musique3.mp3"];
+    const playlist = ["fond.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
         audio.src = playlist[currentTrack];
-        audio.play();
+        audio.load();
+        audio.play().catch(error => console.log("Autoplay bloqué :", error));
     }
 
     function nextTrack() {
         currentTrack = (currentTrack + 1) % playlist.length;
         playMusic();
     }
+
+    // Débloquer la musique dès que l’utilisateur interagit
+    document.body.addEventListener("click", () => {
+        audio.muted = false; // Désactive le mute
+        playMusic();
+    }, { once: true });
 
     audio.addEventListener("ended", nextTrack); // Passe à la chanson suivante
 
@@ -75,8 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Démarrer la musique dès le chargement du site
+    // Essayer de démarrer la musique silencieusement au chargement
+    audio.muted = true;
     playMusic();
 });
-
- 
