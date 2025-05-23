@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["musique1.mp3", "musique2.mp3", "musique3.mp3"];
+    const playlist = ["fond.mp3", "AMBIANCE.mp3", "musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
@@ -78,3 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // Démarrer la musique dès le chargement du site
     playMusic();
 });
+
+ 
