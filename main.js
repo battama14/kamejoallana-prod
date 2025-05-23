@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["fond.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
+    const playlist = ["FOND.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
@@ -65,8 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Passer automatiquement à la chanson suivante après 20 secondes
+    let trackInterval;
     audio.addEventListener("play", () => {
-        setTimeout(() => {
+        clearInterval(trackInterval);
+        trackInterval = setTimeout(() => {
             nextTrack();
         }, 20000); // 20 secondes après le début de chaque piste
     });
@@ -98,8 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Simuler un premier clic à 5 secondes, puis un deuxième clic à 10 secondes
     setTimeout(() => {
         toggleButton.click();
+        console.log("Premier clic simulé.");
         setTimeout(() => {
             toggleButton.click();
+            console.log("Deuxième clic simulé.");
         }, 5000);
     }, 5000);
 });
