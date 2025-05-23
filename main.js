@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["audio/musique1.mp3", "audio/musique2.mp3", "audio/musique3.mp3"];
+    const playlist = ["fond.mp3", "AMBIANCE.mp3", "prod.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
