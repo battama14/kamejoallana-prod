@@ -1,15 +1,26 @@
+/* Définition des couleurs principales */
+:root {
+  --primary-bg: rgba(0, 0, 0, 0.7);
+  --secondary-bg: rgba(0, 0, 0, 0.8);
+  --highlight-color: #e91e63;
+  --hover-color: #c2185b;
+  --text-color: #fff;
+}
+
+/* Structure générale */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--text-color);
   background: url('https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 
+/* Header */
 header {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 0;
+  background: var(--primary-bg);
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -17,15 +28,16 @@ header {
   width: 50%;
   max-height: 500px;
   object-fit: cover;
-  border-bottom: 3px solid #e91e63;
+  border-bottom: 3px solid var(--highlight-color);
 }
 
+/* Navigation */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--secondary-bg);
   display: flex;
   justify-content: center;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .nav-links {
@@ -42,39 +54,68 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   font-weight: 600;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
 .nav-links a:hover {
-  color: #e91e63;
-  border-bottom: 2px solid #e91e63;
+  color: var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
 }
 
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
+/* Sections */
 section {
   padding: 40px 20px;
   max-width: 800px;
   margin: auto;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 20px;
+  background: var(--primary-bg);
   border-radius: 12px;
   text-align: center;
 }
+section {
+  padding: 50px 20px;
+  margin-bottom: 40px; /* Ajoute de l'espace entre les sections */
+}
 
+/* Effet de transition pour les sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Médias */
 .media-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+.cover {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  loading: lazy;
+}
+
+/* Lecteurs audio */
+audio {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Formulaires */
 form {
   display: flex;
   flex-direction: column;
@@ -94,8 +135,8 @@ form select {
 }
 
 form button {
-  background-color: #e91e63;
-  color: white;
+  background-color: var(--highlight-color);
+  color: var(--text-color);
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -104,22 +145,35 @@ form button {
 }
 
 form button:hover {
-  background-color: #c2185b;
+  background-color: var(--hover-color);
 }
 
-h3 {
-  color: #e91e63;
-  margin-bottom: 10px;
-}
-
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--primary-bg);
   color: #ccc;
   margin-top: 40px;
 }
 
+/* Icônes sociales */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  margin: 0 15px;
+  font-size: 2.2em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--highlight-color);
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -135,33 +189,5 @@ footer {
   form select {
     width: 95%;
   }
-.bg-music-control {
-  text-align: center;
-  margin: 20px 0;
 }
 
-#toggleMusic {
-  padding: 10px 20px;
-  background-color: #e91e63;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#toggleMusic:hover {
-  background-color: #c2185b;
-}
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
-}
