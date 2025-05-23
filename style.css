@@ -189,5 +189,15 @@ footer {
   form select {
     width: 95%;
   }
+  iframe {
+  border: none;
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  background: transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
 }
 
