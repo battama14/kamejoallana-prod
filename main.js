@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const musicButton = document.getElementById("music-button");
 
-    const playlist = ["audio/musique1.mp3", "audio/musique2.mp3", "audio/musique3.mp3"];
+    const playlist = ["fond.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             musicButton.textContent = "🔊 Musique en cours... Click pour stopper";
         } else {
             audio.pause();
-            musicButton.textContent = "🎧 Ambiance toi sur les dernières prod<br>Click ICI";
+            musicButton.textContent = "🎧 Ambiance toi sur les dernières prod dispo<br>Click ICI";
         }
     });
 
