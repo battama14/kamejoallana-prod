@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["fond.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
+    const playlist = ["AMBIANCE.mp3", "fond.mp3", "audio/musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
@@ -88,8 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.style.borderRadius = "5px";
     toggleButton.style.cursor = "pointer";
 
-    // Lancement automatique après quelques secondes
+    // Lancement automatique après 5 secondes avec simulation de 2 clics
     setTimeout(() => {
-        toggleButton.click(); // Simule un clic sur le bouton pour activer la musique
-    }, 5000); // Délai de 5 secondes après l’ouverture du site
+        toggleButton.click(); // Premier clic
+        setTimeout(() => {
+            toggleButton.click(); // Deuxième clic après un petit délai
+        }, 500);
+    }, 5000); // Délai initial de 5 secondes
 });
