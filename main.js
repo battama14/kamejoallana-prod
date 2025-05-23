@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["fond.mp3", "AMBIANCE.mp3", "prod.mp3"];
+    const playlist = ["fond.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
@@ -63,12 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currentTrack = (currentTrack + 1) % playlist.length;
         playMusic();
     }
-
-    // Débloquer la musique dès que l’utilisateur interagit
-    document.body.addEventListener("click", () => {
-        audio.muted = false; // Désactive le mute
-        playMusic();
-    }, { once: true });
 
     audio.addEventListener("ended", nextTrack); // Passe à la chanson suivante
 
@@ -94,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.style.borderRadius = "5px";
     toggleButton.style.cursor = "pointer";
 
-    // Essayer de démarrer la musique silencieusement au chargement
-    audio.muted = true;
-    playMusic();
+    // Lancement automatique après quelques secondes
+    setTimeout(() => {
+        toggleButton.click(); // Simule un clic sur le bouton pour activer la musique
+    }, 5000); // Délai de 5 secondes après l’ouverture du site
 });
