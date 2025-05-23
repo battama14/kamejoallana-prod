@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("bg-music");
     const toggleButton = document.getElementById("toggle-music");
 
-    const playlist = ["fond.mp3", "AMBIANCE.mp3", "audio/musique3.mp3"];
+    const playlist = ["audio/musique1.mp3", "audio/musique2.mp3", "audio/musique3.mp3"];
     let currentTrack = 0;
 
     function playMusic() {
@@ -81,6 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleButton.textContent = "🎵 Activer la musique";
         }
     });
+
+    // Assurer que le bouton reste toujours visible
+    toggleButton.style.position = "fixed";
+    toggleButton.style.bottom = "20px";
+    toggleButton.style.right = "20px";
+    toggleButton.style.zIndex = "999";
+    toggleButton.style.padding = "10px";
+    toggleButton.style.background = "#000";
+    toggleButton.style.color = "#fff";
+    toggleButton.style.border = "none";
+    toggleButton.style.borderRadius = "5px";
+    toggleButton.style.cursor = "pointer";
 
     // Essayer de démarrer la musique silencieusement au chargement
     audio.muted = true;
