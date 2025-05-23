@@ -65,6 +65,7 @@
         <input type="email" name="email" placeholder="Email" required />
         <textarea name="message" placeholder="Votre message" required></textarea>
         <button type="submit">Envoyer</button>
+        <p class="form-message" style="display: none; color: #0f0;">Merci, votre message a été envoyé !</p>
       </form>
     </section>
 
@@ -83,8 +84,32 @@
         </select>
         <textarea name="message" placeholder="Détails"></textarea>
         <button type="submit">Envoyer la commande</button>
+        <p class="form-message" style="display: none; color: #0f0;">Merci, votre commande a été envoyée !</p>
       </form>
     </section>
+
+    <!-- Section Commentaires avec Disqus -->
+    <section id="commentaires">
+      <h2>Commentaires</h2>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://kamejoallana-prod.disqus.com/embed.js'; // Ton identifiant Disqus
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </section>
+
   </main>
 
   <footer>
