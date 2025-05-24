@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             musicButton.textContent = "🔊 Musique en cours... Click pour stopper";
         } else {
             audio.pause();
-            musicButton.textContent = "🎧 Ambiance toi sur les dernières prod<br>Click ICI";
+            musicButton.textContent = "🎧 Ambiance toi sur les dernières prod ---> Click ICI";
         }
     });
 
