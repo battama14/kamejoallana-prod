@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-   <!-- Ajout du favicon -->
+
+  <!-- Ajout du favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Balises meta pour Google -->
@@ -32,9 +33,9 @@
     </nav>
   </header>
 
-  <!-- Ajout du lecteur audio et du bouton -->
+  <!-- Bouton d’ambiance musical stylé -->
+  <button id="music-button">🎧 Ambiance toi sur les dernières prod<br>Click ICI</button>
   <audio id="bg-music" loop></audio>
-  <button id="toggle-music">🎵 Activer / Désactiver la musique</button>
 
   <main>
     <section id="musique" class="fade-in">
@@ -72,12 +73,12 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebKLUKueN5tqqedoiiWj4qwo20L03nFj9VI5x1tOj5zeZSjA/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebKLUKueN5tqqedoiiWj4qwo20L03nFj9VI5x1tOj5zeZSjA/viewform?embedded=true" width="640" height="600" frameborder="0">Chargement…</iframe>
     </section>
 
     <section id="commande">
       <h2>Commander une production</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSim5qrNue3n3b6gDC0ASFksY_TR3DzQbXrACWsxslLumx0g/viewform?embedded=true" width="640" height="973" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSim5qrNue3n3b6gDC0ASFksY_TR3DzQbXrACWsxslLumx0g/viewform?embedded=true" width="640" height="973" frameborder="0">Chargement…</iframe>
     </section>
 
     <!-- Section Commentaires avec Disqus -->
@@ -89,9 +90,9 @@
           this.page.url = window.location.href;
           this.page.identifier = window.location.pathname;
         };
-        (function() { // DON'T EDIT BELOW THIS LINE
+        (function() {
           var d = document, s = d.createElement('script');
-          s.src = 'https://kamejoallana-prod.disqus.com/embed.js'; // Ton identifiant Disqus
+          s.src = 'https://kamejoallana-prod.disqus.com/embed.js';
           s.setAttribute('data-timestamp', +new Date());
           (d.head || d.body).appendChild(s);
         })();
@@ -116,8 +117,6 @@
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-</body>
-  <button id="music-button">🎧 Ambiance toi sur les dernières prod<br>Click ICI</button>
-<audio id="bg-music" loop></audio>
 
+</body>
 </html>
