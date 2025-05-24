@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Ajout du favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Balises meta pour Google -->
+  <!-- Meta SEO / Réseaux sociaux -->
   <meta property="og:image" content="https://tonsite.com/logo.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="KAMEJOALLANA PRODUCTION">
   <meta property="og:description" content="Écoute les dernières productions musicales de KAMEJOALLANA.">
   <meta property="og:url" content="https://tonsite.com">
 </head>
+
 <body id="accueil">
 
   <header>
@@ -33,7 +34,7 @@
     </nav>
   </header>
 
-  <!-- Bouton d’ambiance musical stylé -->
+  <!-- Bouton d’ambiance musical -->
   <button id="music-button">🎧 Ambiance toi sur les dernières prod<br>Click ICI</button>
   <audio id="bg-music" loop></audio>
 
@@ -81,7 +82,6 @@
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSim5qrNue3n3b6gDC0ASFksY_TR3DzQbXrACWsxslLumx0g/viewform?embedded=true" width="640" height="973" frameborder="0">Chargement…</iframe>
     </section>
 
-    <!-- Section Commentaires avec Disqus -->
     <section id="commentaires">
       <h2>Commentaires</h2>
       <div id="disqus_thread"></div>
@@ -98,21 +98,42 @@
         })();
       </script>
       <noscript>
-        Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        Veuillez activer JavaScript pour voir les commentaires via Disqus.
       </noscript>
     </section>
-
   </main>
 
   <footer>
     <p>&copy; 2025 KAMEJOALLANA PRODUCTION. Tous droits réservés.</p>
+
+    <!-- Réseaux sociaux -->
     <div class="social-icons">
       <a href="https://www.facebook.com/share/1DkUpTHert/" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="https://instagram.com/kamejoallana.prod?igsh=OTNpdjd3MjFubDky" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://youtube.com/@kamejoallana-prod" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
+
+    <!-- Compteur de vues -->
+    <p style="margin-top: 10px;">Nombre de vues : <span id="visits">Chargement...</span></p>
+
+    <!-- Compteur utilisateurs en ligne -->
+    <script async src="//whos.amung.us/pingjs/?k=kamejoallana&t=Utilisateurs&y=t"></script>
+    <script async src="//whos.amung.us/widget/kamejoallana/compact.js"></script>
   </footer>
+
+  <!-- Script compteur de vues -->
+  <script>
+    fetch('https://api.countapi.xyz/hit/kamejoallana-production/views')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('visits').textContent = data.value;
+      });
+  </script>
+
+  <!-- Flèche retour haut -->
+  <a href="#accueil" class="scroll-top" title="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </a>
 
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
