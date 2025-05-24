@@ -56,22 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function playMusic() {
         audio.src = playlist[currentTrack];
         audio.load();
-        audio.play().catch(error => console.log("Autoplay bloqué :", error));
+        audio.play().catch(error => console.log("Lecture bloquée :", error));
     }
 
     function nextTrack() {
         currentTrack = (currentTrack + 1) % playlist.length;
         playMusic();
     }
-
-    // Passer automatiquement à la chanson suivante après 20 secondes
-    let trackInterval;
-    audio.addEventListener("play", () => {
-        clearInterval(trackInterval);
-        trackInterval = setTimeout(() => {
-            nextTrack();
-        }, 20000);
-    });
 
     audio.addEventListener("ended", nextTrack);
 
@@ -113,14 +104,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     `;
     document.head.appendChild(styleSheet);
-
-    // Simuler un premier clic à 5 secondes, puis un deuxième clic à 10 secondes
-    setTimeout(() => {
-        musicButton.click();
-        console.log("Premier clic simulé.");
-        setTimeout(() => {
-            musicButton.click();
-            console.log("Deuxième clic simulé.");
-        }, 5000);
-    }, 5000);
 });
