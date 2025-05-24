@@ -81,14 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
             musicButton.textContent = "🔊 Musique en cours... Click pour stopper";
         } else {
             audio.pause();
-            musicButton.textContent = "🎧 Ambiance toi sur les dernières prod dispo<br>Click ICI";
+            musicButton.textContent = "🎧 Ambiance toi sur les dernières prod<br>Click ICI";
         }
     });
 
     // Assurer que le bouton reste toujours visible et stylé
     musicButton.style.position = "fixed";
     musicButton.style.right = "20px";
-    musicButton.style.bottom = "40px";
+    musicButton.style.bottom = "80px"; // Augmenté pour éviter de masquer les icônes sociales
     musicButton.style.zIndex = "999";
     musicButton.style.padding = "12px 16px";
     musicButton.style.background = "linear-gradient(45deg, #ff6600, #ff0066)";
