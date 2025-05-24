@@ -113,22 +113,18 @@
       <a href="https://youtube.com/@kamejoallana-prod" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <!-- Compteur de vues -->
-    <p style="margin-top: 10px;">Nombre de vues : <span id="visits">Chargement...</span></p>
+    <!-- Compteur de vues HitWebCounter -->
+    <div style="margin-top: 10px;">
+      <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=20749067&style=0038&nbdigits=5&type=page&initCount=0" 
+             title="Counter Widget" alt="Visit counter For Websites" border="0" />
+      </a>
+    </div>
 
     <!-- Compteur utilisateurs en ligne -->
     <script async src="//whos.amung.us/pingjs/?k=kamejoallana&t=Utilisateurs&y=t"></script>
     <script async src="//whos.amung.us/widget/kamejoallana/compact.js"></script>
   </footer>
-
-  <!-- Script compteur de vues -->
-  <script>
-    fetch('https://api.countapi.xyz/hit/kamejoallana-production/views')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('visits').textContent = data.value;
-      });
-  </script>
 
   <!-- Flèche retour haut -->
   <a href="#accueil" class="scroll-top" title="Retour en haut">
